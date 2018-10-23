@@ -1,8 +1,0 @@
-query WebhookByUser($token: String) {
- WebhookByUser(userid: $token) {
-    _id
-    UserId
-    intTime
-    WebhookConntent
-  }
-}
