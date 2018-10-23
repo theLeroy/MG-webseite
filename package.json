@@ -28,7 +28,6 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "shelljs": "^0.8.2",
-    "vue-cli-plugin-apollo": "^0.17.0",
     "vue-template-compiler": "^2.5.17"
   }
 }
