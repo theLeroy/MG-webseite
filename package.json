@@ -1,6 +1,6 @@
 {
-  "name": "Webhook-Receiver",
-  "description": "The one and Only Webhook Receiver",
+  "name": "IndieKator",
+  "description": "Das beste Festival von hier bis Westberlin.",
   "version": "0.1.1",
   "private": true,
   "scripts": {
