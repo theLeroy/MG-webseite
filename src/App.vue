@@ -19,6 +19,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+body {
+  background-image: url('./assets/background.png');
+  background-color: #000;
+}
+.section {
+  width: 100%;
+}
 #nav {
   padding: 30px;
   a {
@@ -36,9 +43,6 @@ body {
   font-family: 'Helvetica Neue','Helvetica','Roboto','Arial',sans-serif !important;
   margin: 0px;
   padding: 0px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
   box-sizing: border-box;
 }
 
@@ -46,9 +50,6 @@ html {
   display: block;
   margin: 0px;
   padding: 0px;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
 }
 
 //Reset template Boilertemplate -->

@@ -6,7 +6,6 @@
     <div class="title Orange" v-else-if="Color != 'Cyan'">
       {{title}}
     </div>
-
     <Bild class="Bild" :Bildlink="Bildlink"/>
 
     <div class="text">
@@ -70,6 +69,7 @@ $Bwd: 40vh;
 }
 .text {
   font-size: 20px;
+  line-height: 1.9;
   position: absolute;
   margin-left: calc(#{$Bwd} + #{$Bml} + 40px);
   margin-top: calc(#{$Bmt} + 180px);

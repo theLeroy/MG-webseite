@@ -16,6 +16,8 @@ export default {
 <style scoped lang="scss">
 img {
   width: 100%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 </style>
