@@ -3,7 +3,9 @@
     <h2>{{Month}}</h2>
     <h1>{{Day}}</h1>
     <h3>{{Acts}}</h3>
-    <a :href="Link">And more</a>
+    <div class="l">
+      <a :href="Link">And more</a>
+    </div>
   </div>
 </template>
 
@@ -36,13 +38,36 @@ $cardwith: 240px;
   margin-left: calc(((100vw - (#{$cardwith}*3)) / 6) * 2);
 }
 h2 {
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 22px;
+  text-transform: uppercase;
 }
 h1 {
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 90px;
   font-weight: 900;
 }
 h3 {
+  margin-top: 15px;
+  font-size: 16px;
   color: #000;
+}
+a {
+  color: #FF9A56;
+}
+.l {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 770px) {
+  $cardwith: 240px;
+  .Card {
+    width: $cardwith;
+    height: $cardwith;
+    display: block;
+    margin-left: calc(50vw - (#{$cardwith} / 2));
+  }
+  .Card:first-of-type {
+    margin-left: calc(50vw - (#{$cardwith} / 2));
+  }
 }
 </style>
