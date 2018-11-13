@@ -7,6 +7,12 @@
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Cyan'" :title="Bildsection1Title" :text="Bildsection1Text"/>
     </div>
     <div class="section" id="section3">
+      <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection1Title" :text="Bildsection1Text"/>
+    </div>
+    <div class="section" id="section4">
+      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
+      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
+      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
     </div>
   </div>
 </template>
@@ -15,17 +21,19 @@
 
 import BildSection from '@/components/BildSection.vue'
 import Logo from '@/components/Logo.vue'
+import Card from '@/components/Card.vue'
 
 export default {
   name: 'Frontpage',
   components: {
     BildSection,
-    Logo
+    Logo,
+    Card
   },
   data () {
     return {
-      Bildsection1Title: 'Hay Eins Title',
-      Bildsection1Text: 'nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sa',
+      Bildsection1Title: 'Hay Eins Title:',
+      Bildsection1Text: 'nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sa'
     }
   }
 }
@@ -44,5 +52,8 @@ export default {
 #section3 {
   height: 100vh;
   background-color: #ffffff;
+}
+#section4 {
+  height: 100vh;
 }
 </style>
