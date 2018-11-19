@@ -13,6 +13,30 @@ export default {
 
 <style lang="scss">
 
+// Scrollbar
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #3cfcfe;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 0px;
+  margin-left: 20px;
+  background-color: #fb9a57;
+  display: none;
+}
+::-webkit-scrollbar-track-piece:start {
+  background: transparent url('assets/background.png') repeat-y !important;
+}
+
+::-webkit-scrollbar-track-piece:end {
+  background: transparent url('assets/background.png') repeat-y !important;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

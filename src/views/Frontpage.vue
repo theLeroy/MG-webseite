@@ -10,12 +10,12 @@
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection1Title" :text="Bildsection1Text"/>
     </div>
     <div class="section" id="section4">
-      <div class="Title">
-        Actlist and Timetable
-      </div>
-      <div class="Subtitle">
-        29.October to 1.November 2019
-      </div>
+      <h1>
+        {{Title}}
+      </h1>
+      <h2>
+        {{Subtitle}}
+      </h2>
         <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
         <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
         <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
@@ -39,7 +39,9 @@ export default {
   data () {
     return {
       Bildsection1Title: 'Hay Eins Title:',
-      Bildsection1Text: 'nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sa'
+      Bildsection1Text: 'nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sa',
+      Title: 'Actlist and Timetable',
+      Subtitle: '29.October to 1.November 2019'
     }
   }
 }
@@ -48,11 +50,18 @@ export default {
 
 <style scoped lang="scss">
 $o: #FF9A56;
-.Title {
-
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  margin-top: 20vh;
+  margin-bottom: 20px;
 }
-.Subtitle {
-
+h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
 }
 #section1 {
   height: 100vh;
