@@ -10,9 +10,15 @@
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection1Title" :text="Bildsection1Text"/>
     </div>
     <div class="section" id="section4">
-      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
-      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
-      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
+      <div class="Title">
+        Actlist and Timetable
+      </div>
+      <div class="Subtitle">
+        29.October to 1.November 2019
+      </div>
+        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
+        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
+        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
     </div>
   </div>
 </template>
@@ -41,6 +47,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$o: #FF9A56;
+.Title {
+
+}
+.Subtitle {
+
+}
 #section1 {
   height: 100vh;
   background-color: none;
