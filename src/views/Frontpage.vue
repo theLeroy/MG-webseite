@@ -16,10 +16,13 @@
       <h2>
         {{Subtitle}}
       </h2>
+      <div class="Cardcontainer">
         <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
         <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
         <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
-    </div>
+      </div>
+        <Dots/>
+      </div>
   </div>
 </template>
 
@@ -28,13 +31,15 @@
 import BildSection from '@/components/BildSection.vue'
 import Logo from '@/components/Logo.vue'
 import Card from '@/components/Card.vue'
+import Dots from '@/components/Dots.vue'
 
 export default {
   name: 'Frontpage',
   components: {
     BildSection,
     Logo,
-    Card
+    Card,
+    Dots
   },
   data () {
     return {
@@ -50,6 +55,9 @@ export default {
 
 <style scoped lang="scss">
 $o: #FF9A56;
+.Cardcontainer {
+  position: absolute;
+}
 h1 {
   text-align: center;
   color: #fff;

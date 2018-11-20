@@ -46,6 +46,7 @@ export default {
 body {
   background-image: url('./assets/background.png');
   background-color: #000;
+  overflow-x: hidden;
 }
 .section {
   width: 100%;
@@ -74,6 +75,7 @@ html {
   display: block;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 
 //Reset template Boilertemplate -->
