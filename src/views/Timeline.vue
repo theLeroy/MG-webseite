@@ -77,29 +77,103 @@ export default {
           Name: 'AnnenMayKantereit',
           Genre: 'Indie Rock',
           Day: '1',
-          Description: ''
+          Description: 'Die tiefste stimme in Europa'
         },
         {
           Time: '16:10',
           Name: 'Faber',
           Genre: 'Indie Rock',
           Day: '1',
-          Description: ''
+          Description: 'Faber erweckt die Toten zum Leben und die Lebenden tötet er mit seiner Stimme und den atemberaubenden Texten'
         },
         {
           Time: '16:10',
           Name: 'Odezenne',
           Genre: 'Techno, Rap',
           Day: '1',
-          Description: ''
+          Description: 'Ein neuer wind im Technogenre'
         },
         {
           Time: '16:10',
           Name: 'Jeans For Jesus',
           Genre: 'Indie Pop',
           Day: '1',
-          Description: ''
+          Description: 'Jesus wäre stolz!'
         },
+        
+        
+        
+        {
+          Time: '16:10',
+          Name: 'Leyya',
+          Genre: 'Indie Pop',
+          Day: '1',
+          Description: 'Junge leute mit Stil und guter Musik'
+        },
+        {
+          Time: '16:10',
+          Name: 'Bonaparte',
+          Genre: 'Visual Trash Punk',
+          Day: '1',
+          Description: 'Bonaparte ist nur schwer mit schwarzer Tinte festhaltbar'
+        },
+        {
+          Time: '16:10',
+          Name: 'Audio 88 & Yassin',
+          Genre: 'HipHop',
+          Day: '1',
+          Description: 'Sozialkritische Texte vor das Volk!'
+        },
+        {
+          Time: '16:10',
+          Name: 'Kalabrese',
+          Genre: 'Techno',
+          Day: '1',
+          Description: 'Techno im Züridialekt'
+        },
+        {
+          Time: '16:10',
+          Name: 'Glass Animals',
+          Genre: 'Indie Rock',
+          Day: '1',
+          Description: 'Diese Musik macht mich Glücklich, dich auch?'
+        },
+        {
+          Time: '16:10',
+          Name: 'Gurr',
+          Genre: 'Slacker Pop',
+          Day: '1',
+          Description: 'Wo Pop mit Rock verschwimmt'
+        },
+        {
+          Time: '16:10',
+          Name: 'Giant Rocks',
+          Genre: 'Indie Rock',
+          Day: '1',
+          Description: 'Nicht nur der dame "Rockt"'
+        },
+        {
+          Time: '16:10',
+          Name: 'Her',
+          Genre: 'Indie',
+          Day: '1',
+          Description: 'Die Indie-Superstars unserer Zeit'
+        },
+        {
+          Time: '16:10',
+          Name: 'The xx',
+          Genre: 'Indie Rock',
+          Day: '1',
+          Description: 'Rocken das Indie Genre wie niemand sonst'
+        },
+        {
+          Time: '16:10',
+          Name: 'Irié Révoltés',
+          Genre: 'Rap',
+          Day: '1',
+          Description: 'Bilingualer Rap, sozialkritisch mit Reggea gewürzt'
+        },
+        
       ]
     }
   }
