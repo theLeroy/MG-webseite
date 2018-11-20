@@ -32,19 +32,74 @@ export default {
       Acts: [
         {
           Time: '16:10',
-          Name: 'Bilderbuch',
-          Description: 's et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ma'
+          Name: 'Alt-j',
+          Genre: 'Alternative Rock',
+          Day: '1',
+          Description: 'Die Innovative Alt-Rock Band aus den Staaten bringt alternative Vibes!'
         },
         {
           Time: '16:10',
           Name: 'Bilderbuch',
-          Description: 's et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ma'
+          Genre: 'Indie Pop',
+          Day: '1',
+          Description: 'Popiger Crazy Shit aus Österreich'
         },
         {
           Time: '16:10',
-          Name: 'Bilderbuch',
-          Description: 's et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ma'
-        }
+          Name: 'Von Wegen Lisbeth',
+          Genre: 'Indie',
+          Day: '1',
+          Description: 'Deepe Texte und erfrische Melodien'
+        },
+        {
+          Time: '16:10',
+          Name: 'Moop Mama',
+          Genre: 'Mixed Styles',
+          Day: '1',
+          Description: 'Ein komplett anderer Mix aus diversen Musikformen ergibt eine Gefühlsachterbahn!'
+        },
+        {
+          Time: '16:10',
+          Name: 'Mine',
+          Genre: 'Indie Folk',
+          Day: '1',
+          Description: 'Eine elegante Stimme revolutioniert den deutschen Pop'
+        },
+        {
+          Time: '16:10',
+          Name: 'Fatony',
+          Genre: 'Rap',
+          Day: '1',
+          Description: 'Genialer Rapper mit stil'
+        },
+        {
+          Time: '16:10',
+          Name: 'AnnenMayKantereit',
+          Genre: 'Indie Rock',
+          Day: '1',
+          Description: ''
+        },
+        {
+          Time: '16:10',
+          Name: 'Faber',
+          Genre: 'Indie Rock',
+          Day: '1',
+          Description: ''
+        },
+        {
+          Time: '16:10',
+          Name: 'Odezenne',
+          Genre: 'Techno, Rap',
+          Day: '1',
+          Description: ''
+        },
+        {
+          Time: '16:10',
+          Name: 'Jeans For Jesus',
+          Genre: 'Indie Pop',
+          Day: '1',
+          Description: ''
+        },
       ]
     }
   }
