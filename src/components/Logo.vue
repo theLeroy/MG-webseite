@@ -1,5 +1,7 @@
 <template>
+  <a id="TTT" href="/.">
     <img src="@/assets/Logo.svg" alt="indiekator Logo">
+  </a>
 </template>
 
 <script>

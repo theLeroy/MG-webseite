@@ -17,9 +17,9 @@
         {{Subtitle}}
       </h2>
       <div class="Cardcontainer">
-        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
-        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
-        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'asd'"/>
+        <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
+        <Card :Day="'31'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=2'"/>
+        <Card :Day="'01'" :Month="'November'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=3'"/>
       </div>
         <Dots/>
       </div>
