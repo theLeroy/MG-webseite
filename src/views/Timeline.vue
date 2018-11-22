@@ -100,9 +100,7 @@ export default {
           Day: '1',
           Description: 'Jesus wäre stolz!'
         },
-        
-        
-        
+
         {
           Time: '16:10',
           Name: 'Leyya',
@@ -172,8 +170,7 @@ export default {
           Genre: 'Rap',
           Day: '1',
           Description: 'Bilingualer Rap, sozialkritisch mit Reggea gewürzt'
-        },
-        
+        }
       ]
     }
   }
@@ -222,7 +219,6 @@ $o: #FF9A56;
   border-width: 8px;
   position: absolute;
   margin-left: 400px;
-
 }
 .Line::after {
   width: 8px;
@@ -236,6 +232,12 @@ $o: #FF9A56;
   /* padding-top: 28px; */
   display: inline-block;
 }
+.Line > :after {
+  content: ".";
+  display: none;
+
+}
+
 #section1 {
   height: 100vh;
   background-color: none;

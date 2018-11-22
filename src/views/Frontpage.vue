@@ -86,4 +86,20 @@ h2 {
 #section4 {
   height: 100vh;
 }
+@media only screen and (max-width: 850px) {
+  #section3 {
+    padding-top: 30px;
+    box-sizing: border-box;
+    height: 110vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #section3 {
+    padding-top: 80px;
+    box-sizing: border-box;
+    height: 110vh;
+  }
+}
+
+
 </style>
