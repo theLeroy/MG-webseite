@@ -18,9 +18,9 @@
       </div>
     </div>
     <div class="Cardcontainer">
-      <Card :Day="'30'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
-      <Card :Day="'31'" :Month="'October'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=2'"/>
-      <Card :Day="'01'" :Month="'November'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=3'"/>
+      <Card :Day="'20'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
+      <Card :Day="'21'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=2'"/>
+      <Card :Day="'22'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=3'"/>
     </div>
     <Dots class="Dots"/>
   </div>
@@ -40,7 +40,7 @@ export default {
     Card
   },
   mounted: function () {
-
+    window.scrollTo(0, 0)
   },
   watch: {
     $route (to, from){
@@ -84,42 +84,42 @@ export default {
           Time: '16:10',
           Name: 'Mine',
           Genre: 'Indie Folk',
-          Day: '2',
+          Day: '1',
           Description: 'Eine elegante Stimme revolutioniert den deutschen Pop'
         },
         {
           Time: '16:10',
           Name: 'Fatony',
           Genre: 'Rap',
-          Day: '2',
+          Day: '1',
           Description: 'Genialer Rapper mit stil'
         },
         {
           Time: '16:10',
           Name: 'AnnenMayKantereit',
           Genre: 'Indie Rock',
-          Day: '2',
+          Day: '1',
           Description: 'Die tiefste stimme in Europa'
         },
         {
           Time: '16:10',
           Name: 'Faber',
           Genre: 'Indie Rock',
-          Day: '2',
+          Day: '1',
           Description: 'Faber erweckt die Toten zum Leben und die Lebenden tötet er mit seiner Stimme und den atemberaubenden Texten'
         },
         {
           Time: '16:10',
           Name: 'Odezenne',
           Genre: 'Techno, Rap',
-          Day: '2',
+          Day: '1',
           Description: 'Ein neuer wind im Technogenre'
         },
         {
           Time: '16:10',
           Name: 'Jeans For Jesus',
           Genre: 'Indie Pop',
-          Day: '2',
+          Day: '1',
           Description: 'Jesus wäre stolz!'
         },
 
