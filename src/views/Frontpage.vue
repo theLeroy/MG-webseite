@@ -5,9 +5,21 @@
     </div>
     <div class="section" id="section2">
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Cyan'" :title="Bildsection1Title" :text="Bildsection1Text"/>
+      <a ref="btnHover" class="btnLink" href="#">
+        <div class="btnText">
+          Tickets Kaufen
+        </div>
+        <Btn/>
+      </a>
     </div>
     <div class="section" id="section3">
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection1Title" :text="Bildsection1Text"/>
+      <a ref="btnHover" class="btnLinkL btnLink" href="#">
+        <div class="btnText">
+          Mehr Infos
+        </div>
+        <Btn/>
+      </a>
     </div>
     <div class="section" id="section4">
       <h1>
@@ -32,6 +44,7 @@ import BildSection from '@/components/BildSection.vue'
 import Logo from '@/components/Logo.vue'
 import Card from '@/components/Card.vue'
 import Dots from '@/components/Dots.vue'
+import Btn from '@/components/Btn.vue'
 
 export default {
   name: 'Frontpage',
@@ -39,7 +52,16 @@ export default {
     BildSection,
     Logo,
     Card,
-    Dots
+    Dots,
+    Btn
+  },
+  mounted: function () {
+      this.$refs.btnHover.addEventListener("mouseover", () => {
+      this.$refs.btnHover.classList.add("btnHover");
+    });
+      this.$refs.btnHover.addEventListener("mouseout", () => {
+      this.$refs.btnHover.classList.remove("btnHover");
+    });
   },
   data () {
     return {
@@ -57,6 +79,35 @@ export default {
 $o: #FF9A56;
 .Cardcontainer {
   position: absolute;
+}
+.btnR {
+
+}
+.btnHover {
+  transition: 0.5s;
+}
+.btnText {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  vertical-align: middle;
+  margin-top: 32px;
+  text-align: center;
+  width: 93%;
+}
+.btnLink {
+  position: absolute;
+  right: 0px;
+  margin-right: 8%;
+  margin-top: 90px;
+}
+.btnLinkL {
+  right: unset;
+  left: 0px;
+  .btnText {
+    color: black;
+  }
 }
 h1 {
   text-align: center;
