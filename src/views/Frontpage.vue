@@ -5,7 +5,7 @@
     </div>
     <div class="section" id="section2">
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Cyan'" :title="Bildsection1Title" :text="Bildsection1Text"/>
-      <a ref="btnHover" class="btnLink" href="#">
+      <a ref="btnHover" class="btnLink" href="/#/Tickets">
         <div class="btnText">
           Tickets Kaufen
         </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="section" id="section3">
       <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection1Title" :text="Bildsection1Text"/>
-      <a ref="btnHover" class="btnLinkL btnLink" href="#">
+      <a ref="btnHover2" class="btnLinkL btnLink" href="#">
         <div class="btnText">
           Mehr Infos
         </div>
@@ -56,12 +56,18 @@ export default {
     Btn
   },
   mounted: function () {
-      this.$refs.btnHover.addEventListener("mouseover", () => {
-      this.$refs.btnHover.classList.add("btnHover");
-    });
-      this.$refs.btnHover.addEventListener("mouseout", () => {
-      this.$refs.btnHover.classList.remove("btnHover");
-    });
+    this.$refs.btnHover.addEventListener('mouseover', () => {
+      this.$refs.btnHover.classList.add('btnHover')
+    })
+    this.$refs.btnHover.addEventListener('mouseout', () => {
+      this.$refs.btnHover.classList.remove('btnHover')
+    })
+    this.$refs.btnHover2.addEventListener('mouseover', () => {
+      this.$refs.btnHover2.classList.add('btnHover')
+    })
+    this.$refs.btnHover2.addEventListener('mouseout', () => {
+      this.$refs.btnHover2.classList.remove('btnHover')
+    })
   },
   data () {
     return {
@@ -151,6 +157,5 @@ h2 {
     height: 110vh;
   }
 }
-
 
 </style>

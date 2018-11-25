@@ -4,9 +4,6 @@
 
 <script type="text/javascript">
 
-// import gql_startNewStory from '@/graphql/Mutation/WebhookByUser.gql'
-// import WebhookByUser from '@/graphql/Query/WebhookByUser.gql'
-
 export default {
 }
 </script>
@@ -46,7 +43,7 @@ export default {
 body {
   background-image: url('./assets/background.png');
   background-color: #000;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .section {
   width: 100%;
@@ -64,6 +61,7 @@ body {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
 body {
   font-family: 'Helvetica Neue','Helvetica','Roboto','Arial',sans-serif !important;
   margin: 0px;

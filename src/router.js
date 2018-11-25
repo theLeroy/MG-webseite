@@ -15,6 +15,11 @@ export default new Router({
       path: '/Timeline',
       name: 'Timeline',
       component: () => import(/* webpackChunkName: "about" */ './views/Timeline.vue')
+    },
+    {
+      path: '/Tickets',
+      name: 'Tickets',
+      component: () => import(/* webpackChunkName: "about" */ './views/Tickets.vue')
     }
   ]
 })

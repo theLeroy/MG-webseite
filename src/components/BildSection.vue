@@ -98,7 +98,6 @@ $Bwd: 40vh;
   right: 0;
 }
 
-
 @media only screen and (max-width: 970px) {
   $Bml: 3%;
   $Bmt: 10%;

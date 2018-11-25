@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'Btn',
+  name: 'Btn'
 }
 </script>
 

@@ -43,7 +43,7 @@ export default {
     window.scrollTo(0, 0)
   },
   watch: {
-    $route (to, from){
+    $route (to, from) {
       location.reload()
       window.scrollTo(0, 0)
     }
