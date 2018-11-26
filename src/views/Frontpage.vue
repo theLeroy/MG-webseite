@@ -13,8 +13,8 @@
       </a>
     </div>
     <div class="section" id="section3">
-      <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection1Title" :text="Bildsection1Text"/>
-      <a ref="btnHover2" class="btnLinkL btnLink" href="#">
+      <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection2Title" :text="Bildsection2Text"/>
+      <a ref="btnHover2" class="btnLinkL btnLink" href="/#/Infos">
         <div class="btnText">
           Mehr Infos
         </div>
@@ -71,8 +71,10 @@ export default {
   },
   data () {
     return {
-      Bildsection1Title: 'Hay Eins Title:',
-      Bildsection1Text: 'nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sa',
+      Bildsection1Title: 'Tickets jetzt im Vorverkauf!',
+      Bildsection1Text: 'Die Tickets für einen Tag oder auch für mehrere Tags sind jetzt im Vorverkauf. Greife schnell zu bevor die Tickets verkauft sind. Uns ist bei den Preisen wichtig, dass sie fair sind. Unser Ziel ist es nicht Profit zu generieren, sondern die Einnahmen dienen Lediglich dazu die Kosten zu decken. ',
+      Bildsection2Title: 'Infos zum Festival',
+      Bildsection2Text: 'Anfahrtswege, Wetter und Infos zum Zeltplatz findest du hier. Unser Festival findet bei jedem Wetter Stadt und der Zeltplatz ist schon am Vortag für alle campenden offen.',
       Title: 'Actlist and Timetable',
       Subtitle: '29.October to 1.November 2019'
     }
