@@ -20,19 +20,6 @@ export default {
       loadingText: 'Loading'
     }
   },
-  mounted () {
-    this.animateLoadingOnce()
-    setInterval(this.animateLoadingOnce, 3200)
-
-    document.getElementsByTagName("html")[0].style.overflowY = "hidden";
-    document.getElementsByTagName("html")[0].style.overflowX = "hidden";
-
-    window.addEventListener('load', () => {
-      document.getElementsByTagName("html")[0].style.overflowY = "unset";
-      document.getElementsByTagName("html")[0].style.overflowX = "hidden";
-      this.isPageLoading = false
-    })
-  },
   methods: {
     animateLoadingOnce () {
       this.loadingText = 'Laden&nbsp;&nbsp;&nbsp;'
@@ -55,6 +42,21 @@ export default {
       })
     }
   },
+  mounted () {
+    this.animateLoadingOnce()
+    setInterval(this.animateLoadingOnce, 3200)
+
+    document.getElementsByTagName('html')[0].style.overflowY = 'hidden'
+    document.getElementsByTagName('html')[0].style.overflowX = 'hidden'
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementsByTagName('html')[0].style.overflowY = 'unset'
+        document.getElementsByTagName('html')[0].style.overflowX = 'hidden'
+        this.isPageLoading = false
+      }, 750)
+    })
+  }
 }
 </script>
 
