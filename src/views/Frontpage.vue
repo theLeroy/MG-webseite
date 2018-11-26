@@ -1,27 +1,33 @@
 <template>
   <div>
-    <div class="section" id="section1">
+    <section class="section" id="section1">
       <logo/>
-    </div>
-    <div class="section" id="section2">
-      <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Cyan'" :title="Bildsection1Title" :text="Bildsection1Text"/>
+      <div class="VideoC">
+        <video class="video" controls>
+          <source src="@/assets/indiekator.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+    </section>
+    <section class="section" id="section2">
+      <BildSection :Bildlink='"3"' :Color="'Cyan'" :title="Bildsection1Title" :text="Bildsection1Text"/>
       <a ref="btnHover" class="btnLink" href="/#/Tickets">
         <div class="btnText">
           Tickets Kaufen
         </div>
         <Btn/>
       </a>
-    </div>
-    <div class="section" id="section3">
-      <BildSection :Bildlink="'https://i.pinimg.com/originals/8e/68/fa/8e68fa1859407d59544bf86d5449685b.jpg'" :Color="'Orange'" :title="Bildsection2Title" :text="Bildsection2Text"/>
+    </section>
+    <section class="section" id="section3">
+      <BildSection :Bildlink="'2'" :Color="'Orange'" :title="Bildsection2Title" :text="Bildsection2Text"/>
       <a ref="btnHover2" class="btnLinkL btnLink" href="/#/Infos">
         <div class="btnText">
           Mehr Infos
         </div>
         <Btn/>
       </a>
-    </div>
-    <div class="section" id="section4">
+    </section>
+    <section class="section" id="section4">
       <h1>
         {{Title}}
       </h1>
@@ -29,9 +35,9 @@
         {{Subtitle}}
       </h2>
       <div class="Cardcontainer">
-        <Card :Day="'20'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
-        <Card :Day="'21'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=2'"/>
-        <Card :Day="'22'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=3'"/>
+        <Card :Day="'20'" :Month="'September'" :Acts="'Mine, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
+        <Card :Day="'21'" :Month="'September'" :Acts="'Leyya, Bonaparte, Kalabrese'" :Link="'/#/timeline?day=2'"/>
+        <Card :Day="'22'" :Month="'September'" :Acts="'OK KID, Rakede, Kraftklub'" :Link="'/#/timeline?day=3'"/>
         <div class="sBtn">
           <a ref="btnHover3" class="socialmedia btnLink" href="www.Instagram.com" target="_blank">
             <div class="btnText">
@@ -54,7 +60,7 @@
         </div>
       </div>
       <Dots/>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -112,7 +118,7 @@ export default {
       Bildsection1Title: 'Tickets jetzt im Vorverkauf!',
       Bildsection1Text: 'Die Tickets für einen Tag oder auch für mehrere Tags sind jetzt im Vorverkauf. Greife schnell zu bevor die Tickets verkauft sind. Uns ist bei den Preisen wichtig, dass sie fair sind. Unser Ziel ist es nicht Profit zu generieren, sondern die Einnahmen dienen Lediglich dazu die Kosten zu decken. ',
       Bildsection2Title: 'Infos zum Festival',
-      Bildsection2Text: 'Anfahrtswege, Wetter und Infos zum Zeltplatz findest du hier. Unser Festival findet bei jedem Wetter Stadt und der Zeltplatz ist schon am Vortag für alle campenden offen.',
+      Bildsection2Text: 'Anfahrtswege, Wetter und Infos zum Zeltplatz findest du hier. Unser Festival findet bei jedem Wetter Stadt und der Zeltplatz ist schon am Vortag für alle campenden offen. Auch dieses Jahr freuen wir uns auf eine grandiose Zeit!',
       Title: 'Actlist and Timetable',
       Subtitle: '20.September to 22.September 2019'
     }
@@ -122,6 +128,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.video {
+  border-image: -moz-linear-gradient(135deg, #3cfcfe 0%,#ff9a56 100%);
+  border-image: -webkit-linear-gradient(135deg, #3cfcfe 0%,#ff9a56 100%);
+  border-image: linear-gradient(135deg, #3cfcfe 0%,#ff9a56 100%);
+  border-image-slice: 1;
+  border-width: 5px;
+  border-style: solid;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 100px;
+  width: 50vw;
+  margin-left: 25vw;
+}
 .sBtn {
   margin-left: calc(50vw - 360px);
   position: absolute;
@@ -194,18 +214,52 @@ h2 {
 #section4 {
   height: 100vh;
 }
+@media only screen and (max-width: 1050px) {
+  .video {
+    width: 75vw;
+    margin-left: 12.5vw;
+  }
+}
 @media only screen and (max-width: 850px) {
+  .video {
+    width: 85vw;
+    margin-left: 7.5vw;
+}
+  .sBtn {
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 100px;
+}
+  #section2 {
+    padding-top: 30px;
+    box-sizing: border-box;
+    height: 150vh;
+  }
+  .btnLink {
+    left: unset;
+    right: unset;
+    margin-top: 400px;
+    margin-left: calc(50% - 100px);
+  }
   #section3 {
     padding-top: 30px;
     box-sizing: border-box;
-    height: 110vh;
+    height: 150vh;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  .btnLink {
+    margin-top: 200px;
+  }
+  .socialmedia {
+    margin-top: 5vh;
+  }
+  #section2 {
+    height: 120vh
+  }
   #section3 {
-    padding-top: 80px;
-    box-sizing: border-box;
-    height: 110vh;
+    height: 120vh
   }
 }
 

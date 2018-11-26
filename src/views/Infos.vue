@@ -6,7 +6,7 @@
     <div class="section" id="section2">
       <h1>Infos:</h1>
       <p class="Text">Wir empfehlen dir mit dem Öv zu kommen. Du kannst die RBS s7 von Bern aus nehmen. Extra Züge stehen nicht bereit.</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783.559771839669!2d7.469244374637186!3d46.97722483962816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e3a06eb072523%3A0x879a454eda17058e!2sStufenbau+Eventlocation!5e1!3m2!1sde!2sch!4v1543223445677" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783.559771839669!2d7.469244374637186!3d46.97722483962816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e3a06eb072523%3A0x879a454eda17058e!2sStufenbau+Eventlocation!5e1!3m2!1sde!2sch!4v1543223445677" width="600" height="600" frameborder="0" class="Google" allowfullscreen></iframe>
 
       <section class="moreInfos">
         <div class="InfoBox">
@@ -87,7 +87,16 @@ export default {
 
 <style scoped lang="scss">
 $o: #FF9A56;
-
+.Google {
+  border-image: -moz-linear-gradient(135deg, #3cfcfe 0%,#ff9a56 100%);
+  border-image: -webkit-linear-gradient(135deg, #3cfcfe 0%,#ff9a56 100%);
+  border-image: linear-gradient(135deg, #3cfcfe 0%,#ff9a56 100%);
+  border-image-slice: 1;
+  border-width: 5px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
 section {
   margin-top: 50px;
 }
@@ -153,9 +162,28 @@ svg {
   margin-bottom: 100px;
 }
 
+@media only screen and (max-width: 1050px) {
+  iframe {
+    width: 75vw;
+    margin-left: 12.5vw;
+    margin-top: 20px;
+  }
+}
 @media only screen and (max-width: 850px) {
+  .InfoBox {
+    width: 50%;
+    padding: 15px;
+  }
+  iframe {
+    width: 85vw;
+    margin-left: 7.5vw;
+  }
 }
 @media only screen and (max-width: 600px) {
+  iframe {
+    width: 90vw;
+    margin-left: 5vw;
+  }
 }
 
 </style>

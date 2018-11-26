@@ -20,7 +20,10 @@ span {
   font-weight: bold;
   text-decoration: none;
   position: absolute;
-  padding: 70px;
+  text-align: center;
+  margin-top: 2.5vw;
+  padding: 25px;
+  width: 12vw;
   opacity: 0;
   transition: 0.4s;
   filter: blur(0.000001px);
@@ -46,5 +49,14 @@ img {
   width: 12vw;
   height: auto;
   margin: 25px;
+}
+@media only screen and (max-width: 850px) {
+  img {
+    width: 35vw;
+  }
+  span {
+    margin-top: 5vw;
+    width: 35vw;
+  }
 }
 </style>

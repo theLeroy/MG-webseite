@@ -56,15 +56,16 @@ $Bwd: 40vh;
   box-shadow: 0px 0px 52px rgba(0,0,0,0.16);
 }
 .title {
-  font-size: 60px;
+  font-size: 55px;
   margin-left: calc(#{$Bml} + 40px);
   margin-top: calc(#{$Bmt} + 40px);
-  font-weight: 500;
+  font-weight: 900;
   width: calc(#{$Bwd} + 100px);
   text-align: left;
   position: absolute;
   z-index: 10;
   color: #21FCFE;
+  font-family: 'Roboto Mono', monospace;
 }
 .Cyan {
   color: #21FCFE;

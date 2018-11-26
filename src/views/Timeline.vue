@@ -18,9 +18,9 @@
       </div>
     </div>
     <div class="Cardcontainer">
-      <Card :Day="'20'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
-      <Card :Day="'21'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=2'"/>
-      <Card :Day="'22'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=3'"/>
+      <Card :Day="'20'" :Month="'September'" :Acts="'Mine, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
+      <Card :Day="'21'" :Month="'September'" :Acts="'Leyya, Bonaparte, Kalabrese'" :Link="'/#/timeline?day=2'"/>
+      <Card :Day="'22'" :Month="'September'" :Acts="'OK KID, Rakede, Kraftklub'" :Link="'/#/timeline?day=3'"/>
     </div>
     <Dots class="Dots"/>
   </div>
@@ -319,6 +319,11 @@ $o: #FF9A56;
   border-width: 8px;
   position: absolute;
   margin-left: 400px;
+  transition: 0.5s
+}
+.Line:hover {
+  background-color: $o;
+  transition: 0.5s
 }
 .Line::after {
   width: 8px;
@@ -336,6 +341,10 @@ $o: #FF9A56;
   content: ".";
   display: none;
 
+}
+.Cardcontainer {
+  padding-bottom: 100px;
+  box-sizing: border-box;
 }
 
 #section1 {

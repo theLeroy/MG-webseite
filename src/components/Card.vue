@@ -33,9 +33,14 @@ $cardwith: 240px;
   border-radius: 5px;
   text-align: center;
   color: #FF9A56;
+  transition: 1s;
 }
 .Card:first-of-type {
   margin-left: calc(((100vw - (#{$cardwith}*3)) / 6) * 2);
+}
+.Card:hover {
+  transform: scale(1.1);
+  transition: 1s;
 }
 h2 {
   font-size: 18px;
@@ -54,6 +59,9 @@ h3 {
 }
 a {
   color: #FF9A56;
+}
+a:hover {
+  color: #000;
 }
 .l {
   margin-top: 30px;
