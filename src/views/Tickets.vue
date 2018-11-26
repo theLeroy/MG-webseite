@@ -140,8 +140,25 @@ svg {
 }
 
 @media only screen and (max-width: 850px) {
+  svg {
+    width: 75vw;
+    margin-left: 12.5vw;
+    margin-top: 100px;
+  }
 }
 @media only screen and (max-width: 600px) {
+  svg {
+    width: 85vw;
+    margin-left: 7.5vw;
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  svg {
+    width: 105vw;
+    margin-left: -1vw;
+    margin-top: 100px;
+  }
 }
 
 </style>

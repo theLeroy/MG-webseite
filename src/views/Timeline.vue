@@ -229,7 +229,8 @@ $o: #FF9A56;
   color: #fff;
 }
 .Name {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 .TextC {
   position: absolute;

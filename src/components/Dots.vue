@@ -41,8 +41,8 @@ section {
   border-width: 3px;
 }
 
-@for $i from 0 through 41 {
-  .dot:nth-child(40n + #{$i}) {
+@for $i from 0 through 31 {
+  .dot:nth-child(30n + #{$i}) {
 
     $aN: dotAnim + $i;
     animation-name: #{$aN};
@@ -76,6 +76,50 @@ section {
         transform: translate(0px, 0px) scale(0.2);
       }
     }
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .dot:nth-child(3n) {
+    position: absolute;
+    display: none;
+    animation: none;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .dot:nth-child(2.5n) {
+    position: absolute;
+    display: none;
+    animation: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .c {
+    margin-top: -1000px !important;
+  }
+  .dot:nth-child(4n) {
+    position: absolute;
+    display: none;
+    animation: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .c {
+    margin-top: -900px !important;
+  }
+  .dot:nth-child(n+80) {
+    position: absolute;
+    display: none;
+    animation: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .c {
+    margin-top: -1000px !important;
+  }
+  .dot:nth-child(n+70) {
+    position: absolute;
+    display: none;
+    animation: none;
   }
 }
 </style>
