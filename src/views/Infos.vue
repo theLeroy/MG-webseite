@@ -47,9 +47,6 @@
         </div>
       </section>
 
-
-
-
       <a ref="btnHover2" class="btnLinkL btnLink" href="/#/Tickets">
         <div class="btnText">
           Tickets Kaufen

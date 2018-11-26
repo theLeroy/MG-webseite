@@ -1,14 +1,111 @@
 <template lang="html">
-  <router-view/>
+  <div :class="{ oh: isPageLoading}">
+    <div v-if="isPageLoading" class="loader">
+      <div class="LoadingSpinning">
+        <img id="L-Svg" src="@/assets/Logo.svg">
+      </div>
+      <h1 class="L-Text" v-html="loadingText"></h1>
+    </div>
+    <router-view @isLoaded="isPageLoading = false"/>
+  </div>
 </template>
 
 <script type="text/javascript">
 
 export default {
+  name: 'App',
+  data () {
+    return {
+      isPageLoading: true,
+      loadingText: 'Loading'
+    }
+  },
+  mounted () {
+    this.animateLoadingOnce()
+    setInterval(this.animateLoadingOnce, 3200)
+
+    document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+    document.getElementsByTagName("html")[0].style.overflowX = "hidden";
+
+    window.addEventListener('load', () => {
+      document.getElementsByTagName("html")[0].style.overflowY = "unset";
+      document.getElementsByTagName("html")[0].style.overflowX = "hidden";
+      this.isPageLoading = false
+    })
+  },
+  methods: {
+    animateLoadingOnce () {
+      this.loadingText = 'Laden&nbsp;&nbsp;&nbsp;'
+      setTimeout(() => {
+        this.loadingText = 'Laden.&nbsp;&nbsp;'
+      }, 800)
+      setTimeout(() => {
+        this.loadingText = 'Laden..&nbsp;'
+      }, 1600)
+      setTimeout(() => {
+        this.loadingText = 'Laden...'
+      }, 2400)
+    }
+  },
+  watch: {
+    '$route': function () {
+      this.isPageLoading = true
+      this.fetchData().then(function () {
+        this.isPageLoading = true
+      })
+    }
+  },
 }
 </script>
 
 <style lang="scss">
+// loader
+.oh {
+  overflow: hidden !important;
+}
+.L-Text {
+  margin-top: 50px;
+  font-size: 30px;
+}
+.loader {
+  top: 0;
+  z-index: 1000;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-30.606407031509484deg, #FF9A56 15%, #21FCFE 85%);
+}
+
+.LoadingSpinning {
+   width: 300px;
+   height: 300px;
+   margin-top: calc(50vh - 150px);
+   margin-left: calc(50vw - 150px);
+   animation: load 10s infinite;
+}
+.L-Text {
+  color: #fff;
+  text-align: center;
+}
+#L-Svg {
+  width: 100%;
+  height: 100%;
+  transform: translateY(-16px);
+}
+@keyframes load {
+   0% {
+      transform: rotate(0deg);
+   }
+   10% {
+      transform: rotate(-500deg);
+   }
+   60% {
+      transform: rotate(700deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
 
 // Scrollbar
 ::-webkit-scrollbar-thumb {
