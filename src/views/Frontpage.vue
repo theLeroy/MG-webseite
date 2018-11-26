@@ -32,9 +32,29 @@
         <Card :Day="'20'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=1'"/>
         <Card :Day="'21'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=2'"/>
         <Card :Day="'22'" :Month="'September'" :Acts="'Her, Alt-j, Bilderbuch'" :Link="'/#/timeline?day=3'"/>
+        <div class="sBtn">
+          <a ref="btnHover3" class="socialmedia btnLink" href="www.Instagram.com" target="_blank">
+            <div class="btnText">
+              Instagram
+            </div>
+            <Btn/>
+          </a>
+          <a ref="btnHover4" class="socialmedia btnLink" href="www.Facebook.com" target="_blank">
+            <div class="btnText">
+              Facebook
+            </div>
+            <Btn/>
+          </a>
+          <a ref="btnHover5" class="socialmedia btnLink" href="www.Twitter.com" target="_blank">
+            <div class="btnText">
+              Twitter
+            </div>
+            <Btn/>
+          </a>
+        </div>
       </div>
-        <Dots/>
-      </div>
+      <Dots/>
+    </div>
   </div>
 </template>
 
@@ -68,6 +88,24 @@ export default {
     this.$refs.btnHover2.addEventListener('mouseout', () => {
       this.$refs.btnHover2.classList.remove('btnHover')
     })
+    this.$refs.btnHover3.addEventListener('mouseover', () => {
+      this.$refs.btnHover3.classList.add('btnHover')
+    })
+    this.$refs.btnHover3.addEventListener('mouseout', () => {
+      this.$refs.btnHover3.classList.remove('btnHover')
+    })
+    this.$refs.btnHover4.addEventListener('mouseover', () => {
+      this.$refs.btnHover4.classList.add('btnHover')
+    })
+    this.$refs.btnHover4.addEventListener('mouseout', () => {
+      this.$refs.btnHover4.classList.remove('btnHover')
+    })
+    this.$refs.btnHover5.addEventListener('mouseover', () => {
+      this.$refs.btnHover5.classList.add('btnHover')
+    })
+    this.$refs.btnHover5.addEventListener('mouseout', () => {
+      this.$refs.btnHover5.classList.remove('btnHover')
+    })
   },
   data () {
     return {
@@ -76,7 +114,7 @@ export default {
       Bildsection2Title: 'Infos zum Festival',
       Bildsection2Text: 'Anfahrtswege, Wetter und Infos zum Zeltplatz findest du hier. Unser Festival findet bei jedem Wetter Stadt und der Zeltplatz ist schon am Vortag für alle campenden offen.',
       Title: 'Actlist and Timetable',
-      Subtitle: '29.October to 1.November 2019'
+      Subtitle: '20.September to 22.September 2019'
     }
   }
 }
@@ -84,6 +122,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.sBtn {
+  margin-left: calc(50vw - 360px);
+  position: absolute;
+  width: 800px;
+}
+.socialmedia {
+  display: inline-block;
+  position: relative !important;
+  left: unset;
+  right: unset;
+}
 $o: #FF9A56;
 .Cardcontainer {
   position: absolute;
@@ -112,7 +161,7 @@ $o: #FF9A56;
 }
 .btnLinkL {
   right: unset;
-  left: 0px;
+  left: 8%;
   .btnText {
     color: black;
   }

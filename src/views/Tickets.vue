@@ -68,7 +68,7 @@
             </g>
         </svg>
       </div>
-      <a ref="btnHover2" class="btnLinkL btnLink" href="https://www.ticketcorner.ch/tickets.html?affiliate=TCS&doc=artistPages%2Ftickets&fun=artist&action=tickets&erid=2331356&kuid=447001&includeOnlybookable=false&sort_by_ytix=evid">
+      <a ref="btnHover2" class="btnLinkL btnLink" href="https://www.ticketcorner.ch/tickets.html?affiliate=TCS&doc=artistPages%2Ftickets&fun=artist&action=tickets&erid=2331356&kuid=447001&includeOnlybookable=false&sort_by_ytix=evid" target="_blank">
         <div class="btnText">
           Kaufen
         </div>
