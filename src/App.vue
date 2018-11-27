@@ -34,14 +34,6 @@ export default {
       }, 2400)
     }
   },
-  watch: {
-    '$route': function () {
-      this.isPageLoading = true
-      this.fetchData().then(function () {
-        this.isPageLoading = true
-      })
-    }
-  },
   mounted () {
     this.animateLoadingOnce()
     setInterval(this.animateLoadingOnce, 3200)
@@ -49,13 +41,11 @@ export default {
     document.getElementsByTagName('html')[0].style.overflowY = 'hidden'
     document.getElementsByTagName('html')[0].style.overflowX = 'hidden'
 
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementsByTagName('html')[0].style.overflowY = 'unset'
-        document.getElementsByTagName('html')[0].style.overflowX = 'hidden'
-        this.isPageLoading = false
-      }, 750)
-    })
+    setTimeout(() => {
+      document.getElementsByTagName('html')[0].style.overflowY = 'unset'
+      document.getElementsByTagName('html')[0].style.overflowX = 'hidden'
+      this.isPageLoading = false
+    }, 1050)
   }
 }
 </script>
