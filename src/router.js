@@ -28,6 +28,11 @@ export default new Router({
       path: '/Infos',
       name: 'Infos',
       component: () => import(/* webpackChunkName: "about" */ './views/Infos.vue')
+    },
+    {
+      path: '/SocialWall',
+      name: 'SocialWall',
+      component: () => import(/* webpackChunkName: "about" */ './views/SocialWall.vue')
     }
   ]
 })
