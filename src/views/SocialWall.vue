@@ -4,19 +4,19 @@
       <logo/>
       <div class="Titel">Teile jetzt deine Besten Indiekator Momente!</div>
       <div class="Upload">
-        <form class="" method="post">
+        <form>
           <input id="Title" type="text" name="Titel" placeholder="Titel des Fotos">
           <input id="User" type="text" name="Username" placeholder="Dein Nutzername">
-          <span class="BrandC">
+          <div class="BrandC">
             <input id="BrandBox" type="checkbox" name="yourbrand">
             <label id="Brand" for="yourbrand">Das Bild/Video darf auf yourbrand.ch verwendet werden.</label>
-          </span>
+          </div>
           <div class="btnC">
             <button class="btn">Foto Hochladen</button>
             <input ref="Upload" id="Upload" type="file" name="Imgae" value="Upload" v-on:change="show = true">
-            <span ref="ok" v-bind:class="{ show: show}" class="Okey">asdasda</span>
+            <span v-bind:class="{ show: show}" class="Okey">Erfolgreich</span>
           </div>
-          <input id="Submit" class="btn" type="submit" name="" value="Absenden">
+          <input id="Submit" v-bind:class="{ show: show}" class="btn" type="submit" name="" value="Absenden">
         </form>
       </div>
     </section>
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+* {
+  box-sizing: border-box;
+}
 .Titel {
   font-size: 24px;
   margin-top: 20px;
@@ -66,8 +69,8 @@ export default {
   text-align: center;
 }
 .Upload {
-  width: 50vw;
-  margin-left: 25vw;
+  width: 40vw;
+  margin-left: 30vw;
   background-color: #fff;
   border-radius: 5px;
   text-align: center;
@@ -85,9 +88,12 @@ export default {
   border-radius: 5px;
   width: 50%;
   height: 25px;
-  margin-top: 20px;
-  padding-left: 4px;
+  margin-top: 25px;
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-left: 25%;
+
 }
 .BrandC {
   width: 50%;
@@ -108,6 +114,8 @@ export default {
   position: relative;
   overflow: hidden;
   display: inline-block;
+  width: 50%;
+  // margin-left: 25%;
 }
 
 .btn {
@@ -115,7 +123,9 @@ export default {
   color: gray;
   background-color: white;
   padding: 6px 15px;
+  box-sizing: border-box;
   border-radius: 8px;
+  width: 100%;
   font-size: 16px;
   transition: 1s;
   &:hover {
@@ -136,10 +146,21 @@ export default {
   width: 20px;
   height: 20px;
   opacity: 0;
-  background: green;
+  color: #FF9A56;
+  transition: 1s;
+  margin-top: 3px;
+}
+
+#Submit {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  opacity: 0;
+  width: 80%;
+  margin-left: 10%;
 }
 .show {
-  opacity: 1;
+  opacity: 1 !important;
+  transition: 1s;
 }
 //Sections
 #section1 {
