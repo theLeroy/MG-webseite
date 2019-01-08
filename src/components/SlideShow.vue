@@ -57,4 +57,16 @@ $o: #FF9A56;
   transform: translateY(-50%);
   position: absolute;
 }
+@media only screen and (max-width: 850px) {
+  .Slide {
+    height: 30vw;
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .Slide {
+    height: 40vw;
+    width: 40vw;
+  }
+}
 </style>

@@ -226,4 +226,10 @@ export default {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+@media only screen and (max-width: 850px) {
+  .Upload {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}
 </style>

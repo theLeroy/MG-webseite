@@ -8,6 +8,9 @@
             Your browser does not support the video tag.
           </video>
         </div>
+        <a class="SWLink" href="/#/SocialWall">
+          Lade jetzt hier dein Indiekator Moment auf unsere SocialWall! <div id="Swimg"></div>
+        </a>
     </section>
     <section class="section" id="section2">
       <BildSection :Bildlink='"3"' :Color="'Cyan'" :title="Bildsection1Title" :text="Bildsection1Text"/>
@@ -213,6 +216,29 @@ h2 {
 }
 #section4 {
   height: 100vh;
+}
+.SWLink {
+  position: absolute;
+  text-decoration: none;
+  transform: rotate(90deg);
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  margin-top: 350px;
+  color: $o;
+  margin-right: -220px;
+  #Swimg {
+    width: 40px;
+    height: 40px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/Pfeil_oben.svg");
+    background: url("https://upload.wikimedia.org/wikipedia/commons/7/76/Pfeil_oben.svg");
+    background-size: cover;
+    display: inline-block;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    filter: contrast(0.000000000000000001);
+    opacity: 0.8;
+  }
 }
 @media only screen and (max-width: 1050px) {
   .video {
