@@ -13,7 +13,7 @@
           </div>
           <div class="btnC">
             <button class="btn">Foto Hochladen</button>
-            <input ref="Upload" id="Upload" type="file" name="Imgae" value="Upload" v-on:change="show = true">
+            <input ref="Upload" id="Upload" type="file" name="Imgae" value="Upload" v-on:change="onFileChange">
             <span v-bind:class="{ show: show}" class="Okey">Erfolgreich</span>
           </div>
           <input id="Submit" v-bind:class="{ show: show}" class="btn" type="submit" name="" value="Absenden">
@@ -21,9 +21,12 @@
       </div>
     </section>
     <section class="section" id="section2">
-      <SlideShow/>
+      <SlideShow :url="url"/>
     </section>
     <section class="section" id="section3">
+      <div id="preview">
+    <img v-if="url" :src="url" />
+  </div>
     </section>
   </div>
 </template>
@@ -39,18 +42,42 @@ export default {
     Logo,
     SlideShow
   },
-  // mounted: function () {
-  //   this.$refs['Upload'].onchange = (() => {
-  //     // this.$refs['ok'].toggleClass('show')
-  //     // show = true
-  //
-  //     this.$set(this.someObject, 'show', 1)
-  //     alert("saiud")
-  //   })
-  // },
   data () {
     return {
+      url: [
+        'https://vuejs.org/images/logo.png',
+      ],
       show: false
+    }
+  },
+  methods: {
+    // Showimg: function () {
+    //   document.getElementById('Upload').addEventListener('change', function(e) {
+    //     var file = document.getElementById('Upload').files[0];
+    //     var imageType = /image.*/;
+    //
+    //     if (file.type.match(imageType)) {
+    //       var reader = new FileReader();
+    //
+    //       reader.onload = function(e) {
+    //         document.getElementById('section3').innerHTML = "";
+    //
+    //         var img = new Image();
+    //         img.src = reader.result;
+    //
+    //         document.getElementById('section3').appendChild(img);
+    //       }
+    //       console.log("ASLIUDH");
+    //       reader.readAsDataURL(file);
+    //     } else {
+    //       document.getElementById('section3').innerHTML = "File not supported!"
+    //     }
+    //   })
+    // }
+    onFileChange(e) {
+      const file = e.target.files[0]
+      this.url.push(URL.createObjectURL(file))
+      // alert(URL.createObjectURL(file))
     }
   }
 }

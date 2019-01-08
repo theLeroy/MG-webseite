@@ -11,6 +11,7 @@
       <slide v-for="i in 10" :key="i">
         <div class="Slide">
           Slide {{i}} Content
+          <img class="Slideimg" v-if="url[(i-1)]" :src="url[(i-1)]" />
         </div>
       </slide>
     </carousel>
@@ -23,6 +24,9 @@ export default {
   components: {
     Carousel,
     Slide
+  },
+  props: {
+    url: Array
   }
 }
 </script>
