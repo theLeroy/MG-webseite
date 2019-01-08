@@ -236,7 +236,7 @@ h2 {
     display: inline-block;
     margin-bottom: -10px;
     margin-left: 10px;
-    filter: contrast(0.000000000000000001);
+    filter: invert(1);
     opacity: 0.8;
   }
 }
