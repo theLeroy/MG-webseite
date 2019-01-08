@@ -231,5 +231,11 @@ export default {
     width: 80vw;
     margin-left: 10vw;
   }
+
+}
+@media only screen and (max-width: 550px) {
+  #section2 {
+    height: 50vh;
+  }
 }
 </style>
