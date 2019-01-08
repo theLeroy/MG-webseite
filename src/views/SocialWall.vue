@@ -4,6 +4,7 @@
       <logo/>
       <div class="Titel">Teile jetzt deine Besten Indiekator Momente!</div>
       <div class="Upload">
+        <span v-bind:class="{ show: show}" class="Okey">Erfolgreich</span>
         <form>
           <input id="Title" type="text" name="Titel" placeholder="Titel des Fotos">
           <input id="User" type="text" name="Username" placeholder="Dein Nutzername">
@@ -14,9 +15,8 @@
           <div class="btnC">
             <button class="btn">Foto Hochladen</button>
             <input ref="Upload" id="Upload" type="file" name="Imgae" value="Upload" v-on:change="onFileChange">
-            <span v-bind:class="{ show: show}" class="Okey">Erfolgreich</span>
           </div>
-          <input id="Submit" v-bind:class="{ show: show}" class="btn" type="submit" name="" value="Absenden">
+          <!-- <input id="Submit" v-bind:class="{ show: show}" class="btn" type="submit" name="" value="Absenden"> -->
         </form>
       </div>
     </section>
@@ -24,9 +24,6 @@
       <SlideShow :url="url"/>
     </section>
     <section class="section" id="section3">
-      <div id="preview">
-    <img v-if="url" :src="url" />
-  </div>
     </section>
   </div>
 </template>
@@ -45,38 +42,23 @@ export default {
   data () {
     return {
       url: [
-        'https://vuejs.org/images/logo.png',
+        'https://c1.staticflickr.com/8/7172/6661760949_c089df9f5b_b.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQrCKJEtXXypSohOQdnz99U1wQ0PvWjeBQUg9QLkX6sEvHEn4bjQ',
+        'http://www.lvz.de/var/storage/images/lvz/kultur/kultur-news/neues-rock-und-indie-festival-startet-diesen-sommer-in-ferropolis/198016043-1-ger-DE/Neues-Rock-und-Indie-Festival-startet-diesen-Sommer-in-Ferropolis_big_teaser_article.jpg',
+        'https://oliknights.files.wordpress.com/2017/02/honestlondonurbanexploringlamarrgoldingparkour.jpg?w=660',
+        'https://www.spreadshirt.de/blog/files/2015/05/blog_festival_Main.jpg',
+        'https://www.hardnews.nl/wp-content/uploads/2015/06/Festival-camping-checklist.png',
+        'http://www.simonchristen.com/images/albums/ue_001.jpg',
+
       ],
       show: false
     }
   },
   methods: {
-    // Showimg: function () {
-    //   document.getElementById('Upload').addEventListener('change', function(e) {
-    //     var file = document.getElementById('Upload').files[0];
-    //     var imageType = /image.*/;
-    //
-    //     if (file.type.match(imageType)) {
-    //       var reader = new FileReader();
-    //
-    //       reader.onload = function(e) {
-    //         document.getElementById('section3').innerHTML = "";
-    //
-    //         var img = new Image();
-    //         img.src = reader.result;
-    //
-    //         document.getElementById('section3').appendChild(img);
-    //       }
-    //       console.log("ASLIUDH");
-    //       reader.readAsDataURL(file);
-    //     } else {
-    //       document.getElementById('section3').innerHTML = "File not supported!"
-    //     }
-    //   })
-    // }
     onFileChange(e) {
+      this.show = true
       const file = e.target.files[0]
-      this.url.push(URL.createObjectURL(file))
+      this.url.unshift(URL.createObjectURL(file))
       // alert(URL.createObjectURL(file))
     }
   }
@@ -103,7 +85,9 @@ export default {
   text-align: center;
   color: #FF9A56;
   transition: 1s;
+  position: relative;
   padding: 10px;
+  margin-bottom: 30px;
   box-sizing: border-box;
   * {
    display: block;
@@ -153,6 +137,7 @@ export default {
   box-sizing: border-box;
   border-radius: 8px;
   width: 100%;
+  margin-bottom: 50px;
   font-size: 16px;
   transition: 1s;
   &:hover {
@@ -170,12 +155,21 @@ export default {
   opacity: 0;
 }
 .Okey {
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   color: #FF9A56;
+  background: #ffffff;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 5px;
+  z-index: 1023;
+  font-size: 24px;
+  padding-top: 100px;
+  display: none;
   transition: 1s;
-  margin-top: 3px;
+  // margin-top: 3px;
 }
 
 #Submit {
@@ -188,6 +182,7 @@ export default {
 .show {
   opacity: 1 !important;
   transition: 1s;
+  display: block;
 }
 //Sections
 #section1 {

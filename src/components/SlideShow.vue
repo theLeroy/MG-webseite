@@ -8,9 +8,8 @@
      paginationActiveColor="#00FCFE"
      paginationColor="rgba(5, 5, 5, 0.4)"
     >
-      <slide v-for="i in 10" :key="i">
+      <slide v-for="i in url.length" :key="i">
         <div class="Slide">
-          Slide {{i}} Content
           <img class="Slideimg" v-if="url[(i-1)]" :src="url[(i-1)]" />
         </div>
       </slide>
@@ -41,10 +40,21 @@ $o: #FF9A56;
   .Slide {
     height: 20vw;
     width: 20vw;
-    background: red;
+    overflow: hidden;
+    position: relative;
+    // background: rgba(#ffffff, 0.8);
     @media only screen and (max-width: 768px) {
       width: 30vw;
       height: 30vw;
     }
   }
+.Slideimg {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
 </style>
