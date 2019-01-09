@@ -20,7 +20,7 @@
       </div>
     </section>
     <section class="section" id="section2">
-      <SlideShow :url="url"/>
+      <SlideShow :url="url" :name="name" :title="title"/>
     </section>
     <section class="section" id="section3">
       <iframe src="https://www.youtube-nocookie.com/embed/odsRJcaGMww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -66,6 +66,54 @@ export default {
         'http://d8mlrvfocjtax.cloudfront.net/artists/3979_36612_original.jpg?1485707709',
 
       ],
+    name: [
+      'moose',
+      'membership',
+      'unicycle',
+      'exerciser',
+      'hockey',
+      'puree',
+      'nova',
+      'undertow',
+      'frisco',
+      'back',
+      'impatience',
+      'grin',
+      'retread',
+      'flipping',
+      'trek',
+      'normal',
+      'garnock',
+      'wig',
+      'picken',
+      'skinsdale',
+      'throwing',
+      'unease',
+      'replace',
+      'brittle',
+      'cap',
+      'task',
+      'seanuts'
+    ],
+    titel: [
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+      'titel',
+    ]
       show: false
     }
   },

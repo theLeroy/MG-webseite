@@ -25,7 +25,9 @@ export default {
     Slide
   },
   props: {
-    url: Array
+    url: Array,
+    name: Array,
+    title: Array
   }
 }
 </script>
