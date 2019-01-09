@@ -4,10 +4,10 @@
       <logo/>
       <div class="Titel">Teile jetzt deine Besten Indiekator Momente!</div>
       <div class="Upload">
-        <span v-bind:class="{ show: show}" class="Okey">Erfolgreich</span>
+        <span v-bind:class="{ show: show}" class="Okey">Erfolgreich!<br>Dein Bild wird nun unten angezeigt.</span>
         <form>
-          <input id="Title" type="text" name="Titel" placeholder="Titel des Fotos">
-          <input id="User" type="text" name="Username" placeholder="Dein Nutzername">
+          <input id="Title" v-model="titl" type="text" name="Titel" placeholder="Titel des Fotos">
+          <input id="User" v-model="usnm" type="text" name="Username" placeholder="Dein Nutzername">
           <div class="BrandC">
             <input id="BrandBox" type="checkbox" name="yourbrand">
             <label id="Brand" for="yourbrand">Das Bild/Video darf auf yourbrand.ch verwendet werden.</label>
@@ -20,7 +20,7 @@
       </div>
     </section>
     <section class="section" id="section2">
-      <SlideShow :url="url" :name="name" :title="title"/>
+      <SlideShow :url="url" :name="name" :titel="titel"/>
     </section>
     <section class="section" id="section3">
       <iframe src="https://www.youtube-nocookie.com/embed/odsRJcaGMww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -63,65 +63,61 @@ export default {
         'https://www.pangea-festival.de/files/content/Galeries/2018/Top%20Shots/%C2%A9NiclasRuehl_Pangea2018_lowres-907.jpg',
         'https://thefusionfestival.co.uk/wp-content/uploads/2018/09/38-David-Guetta-Fusion-Charlotte_Wellings.jpg',
         'https://style-magazin.ch/sites/default/files/styles/fixed-width-778/public/web-jeans_for_jesus_011.jpg.jpg?itok=V9JCaijI',
-        'http://d8mlrvfocjtax.cloudfront.net/artists/3979_36612_original.jpg?1485707709',
+        'http://d8mlrvfocjtax.cloudfront.net/artists/3979_36612_original.jpg?1485707709'
 
       ],
-    name: [
-      'moose',
-      'membership',
-      'unicycle',
-      'exerciser',
-      'hockey',
-      'puree',
-      'nova',
-      'undertow',
-      'frisco',
-      'back',
-      'impatience',
-      'grin',
-      'retread',
-      'flipping',
-      'trek',
-      'normal',
-      'garnock',
-      'wig',
-      'picken',
-      'skinsdale',
-      'throwing',
-      'unease',
-      'replace',
-      'brittle',
-      'cap',
-      'task',
-      'seanuts'
-    ],
-    titel: [
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-      'titel',
-    ]
+      name: [
+        'Sophie',
+        'Jonas',
+        'Elias',
+        'Maria',
+        'Sophia',
+        'Alexander',
+        'Emilia',
+        'Emma',
+        'Ben',
+        'Hannah',
+        'Anna',
+        'Mia',
+        'Maximilian',
+        'Marie',
+        'Paul',
+        'Noah',
+        'Leon',
+        'Luisa',
+        'Louis',
+        'Felix'
+      ],
+      titel: [
+        'Die Ruinen',
+        'Alt J. Der beste Auftritt ever!',
+        'I Love Indiekator',
+        'Stimmungsbild',
+        'Indie',
+        'Bilderbuch',
+        'Atemberaubender Auftritt von Her',
+        'Leyya mein bestes Bild',
+        'Luftbalone',
+        'Das Zeltlager',
+        'Die Fabrick von innen',
+        'Fantastisches Konzert',
+        'Die Stimmung war super',
+        'Outdor Bühne',
+        'Rock and roll',
+        'Samstags Abend',
+        'Bonaparte',
+        'Jeans for Jesus'
+      ],
       show: false
     }
   },
   methods: {
-    onFileChange(e) {
+    onFileChange (e) {
       this.show = true
       const file = e.target.files[0]
       this.url.unshift(URL.createObjectURL(file))
+      this.titel.unshift(this.titl)
+      this.name.unshift(this.usnm)
       // alert(URL.createObjectURL(file))
     }
   }

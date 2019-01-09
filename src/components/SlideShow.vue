@@ -12,6 +12,12 @@
         <div class="Slide">
           <img class="Slideimg" v-if="url[(i-1)]" :src="url[(i-1)]" />
         </div>
+        <div class="Title">
+          {{titel[(i-1)]}}
+        </div>
+        <div class="Bname">
+          {{name[(i-1)]}}
+        </div>
       </slide>
     </carousel>
   </div>
@@ -27,7 +33,7 @@ export default {
   props: {
     url: Array,
     name: Array,
-    title: Array
+    titel: Array
   }
 }
 </script>
@@ -39,6 +45,13 @@ export default {
 }
 $cyan: #00FCFE;
 $o: #FF9A56;
+.Title, .Bname {
+  color: $o;
+  line-height: 1.2;
+}
+.Bname {
+  margin-bottom: 10px;
+}
   .Slide {
     height: 20vw;
     width: 20vw;
