@@ -2,7 +2,7 @@
   <div>
     <section class="section" id="section1">
       <logo/>
-      <div class="Titel">Teile jetzt deine Besten Indiekator Momente!</div>
+      <div class="Titel">Teile jetzt deine besten Indiekator Momente!</div>
       <div class="Upload">
         <span v-bind:class="{ show: show}" class="Okey">Erfolgreich!<br>Dein Bild wird nun unten angezeigt.</span>
         <form>
@@ -274,6 +274,15 @@ export default {
   .Upload {
     width: 80vw;
     margin-left: 10vw;
+  }
+  #section3 {
+    iframe {
+      display: block;
+      width: 90vw;
+      margin-left: 5vw;
+      height: auto;
+      margin-bottom: 40px;
+    }
   }
 
 }
