@@ -10,7 +10,8 @@
     >
       <slide v-for="i in url.length" :key="i">
         <div class="Slide">
-          <img class="Slideimg" v-if="url[(i-1)]" :src="url[(i-1)]" />
+          <video class="Slideimg" v-if="url[(i-1)].split('.').pop() === 'mp4'" :src="url[(i-1)]" controls></video>
+          <img class="Slideimg" v-if="url[(i-1)].split('.').pop() != 'mp4'" :src="url[(i-1)]" />
         </div>
         <div class="Title">
           {{titel[(i-1)]}}
